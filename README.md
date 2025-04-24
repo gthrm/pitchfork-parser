@@ -19,34 +19,38 @@ A Node.js application that monitors Pitchfork's Best New Music page for updates,
 ## Installation
 
 1. Clone this repository:
+
    ```
    git clone <repository-url>
    cd pitchfork-parser
    ```
 
 2. Install dependencies:
+
    ```
    npm install
    ```
 
 3. Copy `.env.example` to `.env` and fill in your API keys:
+
    ```
    cp .env.example .env
    ```
 
 4. Edit the `.env` file with your configuration:
+
    ```
    # Telegram Bot Configuration
    TELEGRAM_BOT_TOKEN=your_telegram_bot_token
    TELEGRAM_CHAT_ID=your_chat_id
 
-   # Spotify API Configuration 
+   # Spotify API Configuration
    SPOTIFY_CLIENT_ID=your_spotify_client_id
    SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
-   
+
    # URLs
-   PITCHFORK_URL=https://pitchfork.com/best/
-   
+   PITCHFORK_URL=https://pitchfork.com/reviews/best/tracks/
+
    # Schedule (cron format - default: once a day at 10:00 AM)
    CRON_SCHEDULE=0 10 * * *
    ```
@@ -60,6 +64,7 @@ npm start
 ```
 
 This will:
+
 1. Start monitoring Pitchfork's Best New Music page
 2. Run on the schedule defined in your `.env` file
 3. Send notifications to your Telegram bot when new music is found
@@ -71,6 +76,7 @@ npm test
 ```
 
 This will:
+
 1. Launch a headless browser
 2. Visit Pitchfork's Best New Music page
 3. Extract data and save it to the `test-output` directory
@@ -81,11 +87,13 @@ This will:
 ### Using PM2:
 
 1. Install PM2 globally:
+
    ```
    npm install -g pm2
    ```
 
 2. Start the application:
+
    ```
    pm2 start src/index.js --name pitchfork-tracker
    ```
@@ -99,12 +107,14 @@ This will:
 ### Using Docker (Raspberry Pi compatible):
 
 1. Make sure Docker and Docker Compose are installed on your Raspberry Pi:
+
    ```
    sudo apt update
    sudo apt install docker.io docker-compose
    ```
 
 2. Clone the repository and navigate to the project folder:
+
    ```
    git clone <repository-url>
    cd pitchfork-parser
@@ -113,11 +123,13 @@ This will:
 3. Create and configure the `.env` file as described above.
 
 4. Build and start the Docker container:
+
    ```
    docker-compose up -d
    ```
 
 5. To view logs:
+
    ```
    docker-compose logs -f
    ```
@@ -137,4 +149,4 @@ The Docker setup is optimized for ARM processors like the one in Raspberry Pi 5.
 
 ## License
 
-MIT 
+MIT
