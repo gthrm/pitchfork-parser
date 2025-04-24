@@ -1,0 +1,13 @@
+services:
+  pitchfork-parser:
+    build: .
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - TZ=Europe/Moscow
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    # Указываем, что можно запускать на ARM процессоре
+    platform: linux/arm64 

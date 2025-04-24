@@ -1,0 +1,20 @@
+{
+  "name": "pitchfork-parser",
+  "version": "1.0.0",
+  "description": "Parser for Pitchfork's Best New Music with Telegram notifications",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node src/browser-test.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cheerio": "^1.0.0-rc.12",
+    "cron": "^3.1.6",
+    "dotenv": "^16.3.1",
+    "node-telegram-bot-api": "^0.64.0",
+    "puppeteer": "^21.5.2",
+    "spotify-web-api-node": "^5.0.2",
+    "youtube-search-api": "^1.2.1"
+  }
+}

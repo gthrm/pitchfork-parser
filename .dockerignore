@@ -1,0 +1,16 @@
+node_modules
+npm-debug.log
+.env
+.git
+.github
+.vscode
+*.md
+!README.md
+test-output
+temp
+src/browser-test.js
+src/get-page-structure.js
+src/fetch-html.js
+src/parser.js
+src/test-tracks.js
+src/index-tracks.js 
