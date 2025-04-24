@@ -9,7 +9,7 @@ sudo apt upgrade -y
 
 # Устанавливаем Docker и Docker Compose
 echo "Installing Docker and Docker Compose..."
-if ! command -v docker &> /dev/null; then
+if ! command -v docker &>/dev/null; then
     curl -fsSL https://get.docker.com | sh
     sudo usermod -aG docker $USER
     echo "Docker installed successfully!"
@@ -18,7 +18,7 @@ else
 fi
 
 # Проверяем, установлен ли Docker Compose
-if ! command -v docker-compose &> /dev/null; then
+if ! command -v docker-compose &>/dev/null; then
     echo "Installing Docker Compose..."
     sudo apt install -y docker-compose
     echo "Docker Compose installed successfully!"
@@ -45,4 +45,4 @@ docker-compose up -d
 echo "==== Installation Complete ===="
 echo "The Pitchfork Parser is now running in the background."
 echo "To view logs, run: docker-compose logs -f"
-echo "To stop the service, run: docker-compose down" 
+echo "To stop the service, run: docker-compose down"
