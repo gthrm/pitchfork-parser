@@ -1,0 +1,8 @@
+feat: Update parser for Pitchfork Best Tracks with Docker support for Raspberry Pi 5
+
+- Refactored tracks parser to support new Pitchfork page structure
+- Added Docker and Docker Compose configuration with ARM support
+- Created installation script for easy Raspberry Pi 5 deployment
+- Removed deprecated files and improved codebase organization
+- Added comprehensive error handling and logging
+- Updated configuration examples and documentation 
